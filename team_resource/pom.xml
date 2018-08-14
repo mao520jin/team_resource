@@ -1,0 +1,301 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.weishi</groupId>
+  <artifactId>team_resource</artifactId>
+  <packaging>war</packaging>
+  <version>1.0.0</version>
+  
+  <name>team_resource</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+  	<spring.version>4.3.3.RELEASE</spring.version>
+  	<aspectj.version>1.8.9</aspectj.version>
+  	<slf4j.version>1.6.6</slf4j.version>
+	<log4j.version>1.2.16</log4j.version>
+	<commons-logging.version>1.2</commons-logging.version>
+	<gson.version>2.7</gson.version>
+	<poi.version>3.13</poi.version>
+	<servlet-api.version>3.1.0</servlet-api.version>
+	<spring.data.redis.version>1.7.4.RELEASE</spring.data.redis.version>
+	<redis.clients.version>2.9.0</redis.clients.version>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>  
+        <groupId>org.springframework</groupId>  
+        <artifactId>spring-test</artifactId>  
+        <version> 3.2.4.RELEASE  </version>  
+        <scope>provided</scope>  
+    </dependency>  
+    
+    <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-beans</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context-support</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjweaver</artifactId>
+		<version>${aspectj.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework.data</groupId>
+		<artifactId>spring-data-redis</artifactId>
+		<version>${spring.data.redis.version}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis-spring</artifactId>
+	    <version>1.3.1</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.google.code.gson</groupId>
+		<artifactId>gson</artifactId>
+		<version>${gson.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<scope>provided</scope>
+		<version>${servlet-api.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>redis.clients</groupId>
+		<artifactId>jedis</artifactId>
+		<version>${redis.clients.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>${slf4j.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>${slf4j.version}</version>
+		<scope>runtime</scope>
+	</dependency>
+	
+	<dependency>  
+	    <groupId>log4j</groupId>  
+	    <artifactId>log4j</artifactId>  
+	    <version>${log4j.version}</version>  
+	</dependency>  
+	
+	<dependency>
+	    <groupId>commons-logging</groupId>
+	    <artifactId>commons-logging</artifactId>
+	    <version>${commons-logging.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.zaxxer</groupId>
+		<artifactId>HikariCP</artifactId>
+		<version>2.6.1</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>net.sf.json-lib</groupId>
+		<artifactId>json-lib</artifactId>
+		<version>2.4</version>
+		<classifier>jdk15</classifier>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi</artifactId>
+		<version>${poi.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml</artifactId>
+		<version>${poi.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.39</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.16.4</version>
+	</dependency>
+  </dependencies>
+  
+  <distributionManagement>
+	<repository>
+		<id>maven-public</id>
+		<name>Nexus Release Repository</name>
+		<url>http://192.168.3.227:8081/nexus/content/groups/public/</url>
+	</repository>
+  </distributionManagement>
+  
+  <build>
+		<finalName>team_resource</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<!-- 默认访问路径为：http://localhost:8080/${project.name} 下面指定访问路径为： http://localhost:8080 -->
+					<path>/${project.name}</path>
+					<uriEncoding>UTF-8</uriEncoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>true</addMavenDescriptor>
+					</archive>
+					<warName>team_resource</warName>
+					<webResources>
+						<resource>
+							<directory>src/main/resources</directory>
+							<targetPath>WEB-INF/classes</targetPath>
+							<filtering>true</filtering>
+							<includes>
+								<exclude>src/main/resources/*</exclude>
+							</includes>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+		</plugins>
+		
+		<!-- 给出对资源文件进行过滤的属性文件的路径，默认位于${basedir}/src/main/filters/目录下。
+		属性文件中定义若干键值对。在构建过程中，对于资源文件中出现的变量（键），将使用属性文件中该键对应的值替换。 -->
+		<filters>
+			<filter>conf/conf-${deploy.env}.properties</filter>
+		</filters>
+	
+		<!-- 资源，构建过程中会往往会将资源文件从源路径复制到指定的目标路径。 -->
+		<resources>
+			<resource>
+				<!-- 资源文件的路径 -->
+				<directory>src/main/resources</directory>
+				<!-- 一组文件名的匹配模式，被匹配的资源文件将被构建过程处理 -->
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<!-- 一组文件名的匹配模式，被匹配的资源文件将被构建过程忽略。同时被includes和excludes匹配的资源文件，将被忽略。 -->
+				<excludes>
+					<exclude></exclude>
+				</excludes>
+				<!-- 构建过程中是否对资源进行过滤，默认false -->
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		
+  </build>
+  
+    <profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<deploy.env>dev</deploy.env>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<deploy.env>test</deploy.env>
+			</properties>
+		</profile>
+		<profile>
+			<id>product</id>
+			<properties>
+				<deploy.env>product</deploy.env>
+			</properties>
+		</profile>
+		<profile>
+			<id>productPre</id>
+			<properties>
+				<deploy.env>productPre</deploy.env>
+			</properties>
+		</profile>
+	 </profiles>
+  
+</project>
